@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package groceries;
+
+service GroceriesService {
+  rpc AddGrocery(CreateRequest) returns (CreateResponse) {}
+}
+
+message CreateRequest {
+  string name = 1;
+  int32 quantity = 2;
+  string unit = 3;
+}
+
+message CreateResponse {
+  string message = 1;
+}
